@@ -11,7 +11,7 @@ app.debug = True
 def hello():
   return "Katelin Rocks!"
 
-@app.route("/<bucket_name>/<filename>/", methods=['GET', 'POST'])
+@app.route("/<bucket_name>/<filename>", methods=['GET', 'POST'])
 def function1(bucket_name, filename):
   if request.method == 'GET':
     return methods.getFunction(bucket_name, filename)
